@@ -1,0 +1,13 @@
+---
+- name: Loop over a list in Ansible
+ hosts: localhost
+ gather_facts: false
+
+ tasks:
+    - name: Print item
+      ansible.builtin.debug:
+        msg: "Item: {{ item }}"
+      loop:
+        - Item 1
+        - Item 2
+        - Item 3
