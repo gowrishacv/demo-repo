@@ -1,13 +1,8 @@
 ---
-- name: Loop over a list in Ansible
- hosts: localhost
- gather_facts: false
-
- tasks:
-    - name: Print item
-      ansible.builtin.debug:
-        msg: "Item: {{ item }}"
-      loop:
-        - Item 1
-        - Item 2
-        - Item 3
+- name: "IRPP - Célibataire ayant des revenus salariaux (1AJ) de 20 000 €"
+  period: 2012
+  absolute_error_margin: 0.5
+  input:
+    salaire_imposable: 20000
+  output:
+    irpp: -1181
